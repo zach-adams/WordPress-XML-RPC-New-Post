@@ -1,0 +1,6 @@
+{
+	"require": {
+		"hieu-le/wordpress-xmlrpc-client":"~2.0",
+		"monolog/monolog": "~1.12"
+	}
+}
