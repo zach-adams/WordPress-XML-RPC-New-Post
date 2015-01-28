@@ -1,13 +1,13 @@
 <?php
 require 'vendor/autoload.php';
 
-$site-endpoint = "http://your-site-endpoint.com/xmlrpc.php";
-$site-username = "username";
-$site-password = "password";
+$site_endpoint = "http://your-site-endpoint.com/xmlrpc.php";
+$site_username = "username";
+$site_password = "password";
 
 
 # Your Wordpress website is at: http://wp-website.com
-$endpoint = $site-endpoint;
+$endpoint = $site_endpoint;
 
 # The Monolog logger instance
 $wpLog = new Monolog\Logger('wp-xmlrpc');
@@ -20,7 +20,7 @@ $wpClient->onError(function($error, $event) use ($wpLog){
 });
 
 # Set the credentials for the next requests
-$wpClient->setCredentials($endpoint, $site-username, $site-password);
+$wpClient->setCredentials($endpoint, $site_username, $site_password);
 
 $args = array(
 	'post_title'=>'Post Title',
